@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Zampini;Daniele;;;
+FN:Daniele Zampini
+TITLE:Photographer / Retoucher / Digitech
+TEL;TYPE=CELL:+393664059733
+EMAIL;TYPE=WORK:info@danielezampini.com
+URL:https://www.danielezampini.com/
+item1.URL:https://www.instagram.com/danielezampinifotografo/
+item1.X-ABLabel:Instagram
+item2.URL:https://www.linkedin.com/in/danielezampini/
+item2.X-ABLabel:LinkedIn
+ADR;TYPE=WORK:;;;;;;Italia
+END:VCARD
