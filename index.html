@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daniele Zampini — Photographer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #111111;
+            color: #f4f4f2;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 55px 28px 70px;
+            flex: 1;
+        }
+
+        header {
+            margin-bottom: 70px;
+        }
+
+        .name {
+            font-size: 15px;
+            letter-spacing: 0.16em;
+            font-weight: 400;
+            margin: 0 0 14px;
+        }
+
+        .role {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #a8a8a5;
+            margin: 0;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .button {
+            min-height: 145px;
+            padding: 25px;
+            border: 1px solid #4b4b49;
+            color: #f4f4f2;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background 0.2s ease,
+                        color 0.2s ease,
+                        border-color 0.2s ease;
+        }
+
+        .button:hover {
+            background: #f4f4f2;
+            color: #111111;
+            border-color: #f4f4f2;
+        }
+
+        .button-symbol {
+            font-size: 26px;
+            font-weight: 300;
+        }
+
+        .button-title {
+            font-size: 13px;
+            letter-spacing: 0.12em;
+        }
+
+        .button-description {
+            font-size: 12px;
+            color: #969693;
+            margin-top: 8px;
+        }
+
+        .button:hover .button-description {
+            color: #555555;
+        }
+
+        .links {
+            border-top: 1px solid #333331;
+            padding-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .links a {
+            color: #a8a8a5;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+        }
+
+        .links a:hover {
+            color: #f4f4f2;
+        }
+
+        footer {
+            padding: 25px 28px 30px;
+            border-top: 1px solid #333331;
+            color: #666662;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            main {
+                padding: 42px 22px 55px;
+            }
+
+            header {
+                margin-bottom: 55px;
+            }
+
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                min-height: 135px;
+            }
+
+            footer {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <header>
+        <h1 class="name">DANIELE ZAMPINI</h1>
+        <p class="role">
+            Photographer / Postproduction<br>
+            Florence, Italy
+        </p>
+    </header>
+
+    <section class="buttons">
+
+        <a href="#" class="button">
+            <span class="button-symbol">＋</span>
+
+            <span>
+                <span class="button-title">SALVA IL CONTATTO</span>
+                <br>
+                <span class="button-description">
+                    Aggiungi i miei dati in rubrica
+                </span>
+            </span>
+        </a>
+
+        <a href="https://www.danielezampini.com/"
+           class="button">
+            <span class="button-symbol">↗</span>
+
+            <span>
+                <span class="button-title">VISITA IL SITO</span>
+                <br>
+                <span class="button-description">
+                    Portfolio e progetti
+                </span>
+            </span>
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 DANIELE ZAMPINI
+</footer>
+
+</body>
+</html>
