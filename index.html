@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -13,9 +15,15 @@
         content="Daniele Zampini — Photographer / Retoucher / Digitech"
     >
 
-    <title>Daniele Zampini — Photographer / Retoucher / Digitech</title>
+    <title>
+        Daniele Zampini — Photographer / Retoucher / Digitech
+    </title>
 
-    <!-- Lato -->
+
+    <!-- ==================================================
+         FONT — LATO
+    ================================================== -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -47,12 +55,15 @@
         body {
             margin: 0;
             padding: 0;
+
             width: 100%;
             min-height: 100%;
         }
 
         body {
+
             background: #ffffff;
+
             color: #111111;
 
             font-family:
@@ -64,6 +75,7 @@
             font-weight: 400;
 
             -webkit-font-smoothing: antialiased;
+
             text-rendering: optimizeLegibility;
         }
 
@@ -78,6 +90,7 @@
         ================================================== */
 
         .page {
+
             min-height: 100vh;
 
             display: flex;
@@ -90,7 +103,9 @@
         ================================================== */
 
         .content {
+
             width: 100%;
+
             max-width: 614px;
 
             margin: 0 auto;
@@ -103,7 +118,7 @@
 
 
         /* ==================================================
-           MAIN GRID
+           DESKTOP GRID
         ================================================== */
 
         .main-grid {
@@ -120,12 +135,13 @@
 
 
         /* ==================================================
-           IMAGE
+           PHOTO
         ================================================== */
 
         .hero-image {
 
             width: 360px;
+
             aspect-ratio: 4 / 3;
 
             overflow: hidden;
@@ -152,10 +168,11 @@
 
             width: 240px;
 
-            display: flex;
-            flex-direction: column;
-
             min-height: 270px;
+
+            display: flex;
+
+            flex-direction: column;
         }
 
 
@@ -164,6 +181,7 @@
         ================================================== */
 
         .identity {
+
             margin: 0;
         }
 
@@ -172,6 +190,7 @@
             margin: 0 0 5px;
 
             font-size: 21px;
+
             line-height: 1.05;
 
             font-weight: 700;
@@ -185,6 +204,7 @@
             margin: 0;
 
             font-size: 13px;
+
             line-height: 1.35;
 
             font-weight: 300;
@@ -194,12 +214,13 @@
 
 
         /* ==================================================
-           CTA
+           CTA CONTAINER
         ================================================== */
 
         .actions {
 
             display: flex;
+
             flex-direction: column;
 
             gap: 20px;
@@ -207,12 +228,19 @@
             margin-top: 50px;
         }
 
+
+        /* ==================================================
+           CTA
+        ================================================== */
+
         .action {
 
             width: 240px;
+
             height: 64px;
 
-            border: 1px solid #d2d2d2;
+            border:
+                1px solid #d2d2d2;
 
             display: grid;
 
@@ -223,7 +251,8 @@
 
             align-items: center;
 
-            padding: 9px 12px;
+            padding:
+                9px 12px;
 
             transition:
                 background-color 0.2s ease,
@@ -239,7 +268,7 @@
 
 
         /* ==================================================
-           CTA ICONS
+           CTA ICON CONTAINER
         ================================================== */
 
         .action-icon {
@@ -248,23 +277,17 @@
             height: 36px;
 
             display: flex;
+
             align-items: center;
             justify-content: flex-start;
 
             color: #111111;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-weight: 300;
-
-            line-height: 1;
         }
 
 
-        /* Plus */
+        /* ==================================================
+           PLUS ICON
+        ================================================== */
 
         .icon-plus {
 
@@ -286,10 +309,8 @@
 
             background: #111111;
 
-            transform: translate(
-                -50%,
-                -50%
-            );
+            transform:
+                translate(-50%, -50%);
         }
 
         .icon-plus::before {
@@ -305,7 +326,11 @@
         }
 
 
-        /* Arrow */
+        /* ==================================================
+           ARROW ICON
+           Disegnata interamente con CSS.
+           Nessun carattere Unicode / emoji.
+        ================================================== */
 
         .icon-arrow {
 
@@ -315,19 +340,21 @@
             height: 34px;
         }
 
+        /* diagonal */
+
         .icon-arrow::before {
 
             content: "";
 
             position: absolute;
 
-            width: 28px;
+            width: 29px;
             height: 1px;
 
             background: #111111;
 
             left: 2px;
-            top: 24px;
+            top: 25px;
 
             transform:
                 rotate(-45deg);
@@ -336,19 +363,25 @@
                 left center;
         }
 
+        /* arrow head */
+
         .icon-arrow::after {
 
-            content: "↗";
+            content: "";
 
             position: absolute;
 
-            right: -2px;
-            top: -7px;
+            width: 10px;
+            height: 10px;
 
-            font-size: 31px;
-            line-height: 1;
+            border-top:
+                1px solid #111111;
 
-            font-weight: 300;
+            border-right:
+                1px solid #111111;
+
+            right: 1px;
+            top: 3px;
         }
 
 
@@ -357,28 +390,38 @@
         ================================================== */
 
         .action-text {
+
             min-width: 0;
+
+            display: block;
         }
 
         .action-title {
 
+            display: block;
+
             margin: 0;
 
             font-size: 13px;
+
             line-height: 1.15;
 
             font-weight: 700;
 
-            letter-spacing: 0.045em;
+            letter-spacing:
+                0.045em;
 
             white-space: nowrap;
         }
 
         .action-description {
 
+            display: block;
+
             margin: 3px 0 0;
 
             font-size: 10px;
+
             line-height: 1.2;
 
             font-weight: 300;
@@ -407,17 +450,20 @@
         .social a {
 
             font-size: 10px;
+
             line-height: 1;
 
             font-weight: 700;
 
-            letter-spacing: 0.045em;
+            letter-spacing:
+                0.045em;
 
             transition:
                 opacity 0.2s ease;
         }
 
         .social a:hover {
+
             opacity: 0.55;
         }
 
@@ -452,10 +498,20 @@
 
         @media (max-width: 600px) {
 
+
+            /* ----------------------------------------------
+               PAGE
+            ---------------------------------------------- */
+
             .page {
+
                 min-height: 100svh;
             }
 
+
+            /* ----------------------------------------------
+               CONTENT
+            ---------------------------------------------- */
 
             .content {
 
@@ -480,6 +536,10 @@
             }
 
 
+            /* ----------------------------------------------
+               MAIN GRID
+            ---------------------------------------------- */
+
             .main-grid {
 
                 width: 100%;
@@ -502,19 +562,22 @@
                 display: flex;
 
                 flex-direction: column;
-
-                column-gap: 0;
             }
 
 
-            /* ==================================================
-               IDENTITY
-            ================================================== */
+            /* ----------------------------------------------
+               DETAILS
+            ---------------------------------------------- */
 
             .details {
 
                 display: contents;
             }
+
+
+            /* ----------------------------------------------
+               IDENTITY
+            ---------------------------------------------- */
 
             .identity {
 
@@ -522,7 +585,8 @@
 
                 margin: 0;
 
-                padding: 0 12px;
+                padding:
+                    0 12px;
             }
 
             .name {
@@ -546,9 +610,9 @@
             }
 
 
-            /* ==================================================
-               IMAGE
-            ================================================== */
+            /* ----------------------------------------------
+               PHOTO
+            ---------------------------------------------- */
 
             .hero-image {
 
@@ -566,9 +630,9 @@
             }
 
 
-            /* ==================================================
-               ACTIONS
-            ================================================== */
+            /* ----------------------------------------------
+               CTA
+            ---------------------------------------------- */
 
             .actions {
 
@@ -601,9 +665,9 @@
             }
 
 
-            /* ==================================================
-               MOBILE ICONS
-            ================================================== */
+            /* ----------------------------------------------
+               MOBILE PLUS
+            ---------------------------------------------- */
 
             .action-icon {
 
@@ -618,12 +682,19 @@
             }
 
             .icon-plus::before {
+
                 width: 32px;
             }
 
             .icon-plus::after {
+
                 height: 32px;
             }
+
+
+            /* ----------------------------------------------
+               MOBILE ARROW
+            ---------------------------------------------- */
 
             .icon-arrow {
 
@@ -636,23 +707,26 @@
                 width: 32px;
 
                 left: 2px;
-                top: 27px;
+                top: 28px;
             }
 
             .icon-arrow::after {
 
-                right: -2px;
-                top: -8px;
+                width: 11px;
+                height: 11px;
 
-                font-size: 35px;
+                right: 1px;
+                top: 3px;
             }
 
 
-            /* ==================================================
+            /* ----------------------------------------------
                MOBILE CTA TEXT
-            ================================================== */
+            ---------------------------------------------- */
 
             .action-title {
+
+                display: block;
 
                 font-size: 16px;
 
@@ -660,21 +734,27 @@
 
                 letter-spacing:
                     0.045em;
+
+                white-space: nowrap;
             }
 
             .action-description {
+
+                display: block;
 
                 margin-top: 4px;
 
                 font-size: 12px;
 
                 line-height: 1.3;
+
+                white-space: normal;
             }
 
 
-            /* ==================================================
+            /* ----------------------------------------------
                SOCIAL
-            ================================================== */
+            ---------------------------------------------- */
 
             .social {
 
@@ -702,11 +782,12 @@
             }
 
 
-            /* ==================================================
+            /* ----------------------------------------------
                FOOTER
-            ================================================== */
+            ---------------------------------------------- */
 
             .footer {
+
                 display: none;
             }
         }
@@ -721,6 +802,7 @@
         ) and (
             max-height: 700px
         ) {
+
 
             .content {
 
@@ -739,18 +821,28 @@
 
 
             .identity {
-                padding: 0 10px;
+
+                padding:
+                    0 10px;
             }
 
+
             .name {
+
                 font-size: 23px;
             }
 
+
             .profession,
             .location {
+
                 font-size: 14px;
             }
 
+
+            /* ----------------------------------------------
+               PHOTO
+            ---------------------------------------------- */
 
             .hero-image {
 
@@ -761,6 +853,10 @@
                 margin-bottom: 28px;
             }
 
+
+            /* ----------------------------------------------
+               CTA
+            ---------------------------------------------- */
 
             .action {
 
@@ -777,13 +873,20 @@
 
 
             .action-title {
+
                 font-size: 14px;
             }
 
+
             .action-description {
+
                 font-size: 11px;
             }
 
+
+            /* ----------------------------------------------
+               SOCIAL
+            ---------------------------------------------- */
 
             .social {
 
@@ -793,26 +896,32 @@
             }
 
             .social a {
+
                 font-size: 12px;
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
     <div class="page">
 
+
         <main class="content">
+
 
             <div class="main-grid">
 
 
-                <!-- ==========================================
+                <!-- ==================================================
                      FOTO
-                =========================================== -->
+                ================================================== -->
 
                 <div class="hero-image">
 
@@ -824,14 +933,16 @@
                 </div>
 
 
-                <!-- ==========================================
+                <!-- ==================================================
                      COLONNA DESTRA
-                =========================================== -->
+                ================================================== -->
 
                 <div class="details">
 
 
-                    <!-- IDENTITÀ -->
+                    <!-- ----------------------------------------------
+                         IDENTITÀ
+                    ---------------------------------------------- -->
 
                     <div class="identity">
 
@@ -850,7 +961,9 @@
                     </div>
 
 
-                    <!-- CTA -->
+                    <!-- ----------------------------------------------
+                         CTA
+                    ---------------------------------------------- -->
 
                     <div class="actions">
 
@@ -868,8 +981,11 @@
                                 class="action-icon"
                                 aria-hidden="true"
                             >
+
                                 <span class="icon-plus"></span>
+
                             </span>
+
 
                             <span class="action-text">
 
@@ -898,8 +1014,11 @@
                                 class="action-icon"
                                 aria-hidden="true"
                             >
+
                                 <span class="icon-arrow"></span>
+
                             </span>
+
 
                             <span class="action-text">
 
@@ -915,10 +1034,13 @@
 
                         </a>
 
+
                     </div>
 
 
-                    <!-- SOCIAL -->
+                    <!-- ----------------------------------------------
+                         SOCIAL
+                    ---------------------------------------------- -->
 
                     <nav
                         class="social"
@@ -943,16 +1065,19 @@
 
                     </nav>
 
+
                 </div>
 
+
             </div>
+
 
         </main>
 
 
-        <!-- ==========================================
+        <!-- ==================================================
              FOOTER
-        =========================================== -->
+        ================================================== -->
 
         <footer class="footer">
 
@@ -960,7 +1085,10 @@
 
         </footer>
 
+
     </div>
 
+
 </body>
+
 </html>
