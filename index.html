@@ -2,19 +2,28 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Daniele Zampini</title>
 
     <!-- Lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet"
     >
 
     <style>
+
+        /* ==================================================
+           BASE
+        ================================================== */
 
         * {
             box-sizing: border-box;
@@ -24,19 +33,25 @@
         body {
             margin: 0;
             padding: 0;
+
             width: 100%;
             min-height: 100%;
         }
 
         body {
-            background: #111111;
-            color: #ffffff;
+            background: #ffffff;
+            color: #111111;
+
             font-family: "Lato", sans-serif;
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
-        /* =========================
+
+        /* ==================================================
            PAGE
-        ========================= */
+        ================================================== */
 
         .page {
             width: 100%;
@@ -49,6 +64,7 @@
 
         .content {
             width: min(960px, calc(100% - 48px));
+
             margin: 0 auto;
 
             padding: 48px 0 40px;
@@ -56,9 +72,10 @@
             flex: 1;
         }
 
-        /* =========================
-           MAIN CARD
-        ========================= */
+
+        /* ==================================================
+           MAIN LAYOUT
+        ================================================== */
 
         .main-grid {
             display: grid;
@@ -70,9 +87,10 @@
             align-items: stretch;
         }
 
-        /* =========================
+
+        /* ==================================================
            IMAGE
-        ========================= */
+        ================================================== */
 
         .hero-image {
             width: 100%;
@@ -80,42 +98,51 @@
             aspect-ratio: 4 / 3;
 
             overflow: hidden;
+
+            background: #f5f5f5;
         }
 
         .hero-image img {
+            display: block;
+
             width: 100%;
             height: 100%;
-
-            display: block;
 
             object-fit: cover;
         }
 
-        /* =========================
-           IDENTITY + ACTIONS
-        ========================= */
+
+        /* ==================================================
+           RIGHT COLUMN
+        ================================================== */
 
         .details {
+            min-width: 0;
+
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
 
-            min-width: 0;
+            justify-content: space-between;
         }
 
+
+        /* ==================================================
+           IDENTITY
+        ================================================== */
+
         .identity {
-            padding-top: 2px;
+            padding-top: 0;
         }
 
         .name {
-            margin: 0 0 10px;
+            margin: 0 0 7px;
 
             font-size: 31px;
             line-height: 1.1;
 
             font-weight: 700;
 
-            letter-spacing: 0.02em;
+            letter-spacing: 0;
         }
 
         .profession,
@@ -123,37 +150,43 @@
             margin: 0;
 
             font-size: 17px;
-            line-height: 1.5;
+            line-height: 1.35;
 
             font-weight: 300;
 
-            color: #b5b5b5;
+            color: #666666;
         }
 
-        /* =========================
-           ACTIONS
-        ========================= */
+
+        /* ==================================================
+           CTA
+        ================================================== */
 
         .actions {
             display: grid;
 
             grid-template-columns: 1fr;
 
-            gap: 12px;
+            gap: 10px;
+
+            margin-top: auto;
+            margin-bottom: 16px;
         }
 
         .action {
-            min-height: 110px;
+            min-height: 104px;
 
-            padding: 20px;
+            padding: 17px 18px;
 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            border: 1px solid #444444;
+            border: 1px solid #d0d0d0;
 
-            color: #ffffff;
+            background: #ffffff;
+
+            color: #111111;
 
             text-decoration: none;
 
@@ -163,77 +196,79 @@
         }
 
         .action:hover {
-            border-color: #ffffff;
-            background: #151515;
+            border-color: #111111;
+
+            background: #f7f7f7;
         }
 
         .action-symbol {
-            font-size: 28px;
+            display: block;
+
+            font-size: 25px;
             line-height: 1;
 
             font-weight: 300;
         }
 
         .action-title {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.2;
-
-            font-weight: 700;
-
-            letter-spacing: 0.10em;
-        }
-
-        .action-description {
-            margin-top: 5px;
-
-            font-size: 13px;
-            line-height: 1.4;
-
-            font-weight: 300;
-
-            color: #999999;
-        }
-
-        /* =========================
-           SOCIAL
-        ========================= */
-
-        .social {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 36px;
-
-            margin-top: 28px;
-        }
-
-        .social a {
-            color: #ffffff;
-
-            text-decoration: none;
-
-            font-size: 13px;
-
-            line-height: 1.4;
 
             font-weight: 700;
 
             letter-spacing: 0.08em;
         }
 
+        .action-description {
+            margin-top: 4px;
+
+            font-size: 13px;
+            line-height: 1.35;
+
+            font-weight: 300;
+
+            color: #777777;
+        }
+
+
+        /* ==================================================
+           SOCIAL
+        ================================================== */
+
+        .social {
+            display: flex;
+
+            justify-content: flex-start;
+
+            gap: 28px;
+        }
+
+        .social a {
+            color: #111111;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            letter-spacing: 0.07em;
+        }
+
         .social a:hover {
             text-decoration: underline;
         }
 
-        /* =========================
+
+        /* ==================================================
            FOOTER
-        ========================= */
+        ================================================== */
 
         .footer {
             width: 100%;
 
-            border-top: 1px solid #292929;
+            border-top: 1px solid #e5e5e5;
 
             padding: 20px 24px;
 
@@ -244,12 +279,13 @@
 
             font-weight: 400;
 
-            color: #666666;
+            color: #777777;
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+
+        /* ==================================================
+           TABLET / MOBILE
+        ================================================== */
 
         @media (max-width: 700px) {
 
@@ -263,7 +299,7 @@
             .main-grid {
                 grid-template-columns: 1fr;
 
-                gap: 20px;
+                gap: 0;
             }
 
             .details {
@@ -285,11 +321,13 @@
             .social {
                 order: 4;
             }
+
         }
 
-        /* =========================
+
+        /* ==================================================
            MOBILE
-        ========================= */
+        ================================================== */
 
         @media (max-width: 600px) {
 
@@ -308,18 +346,19 @@
                     16px;
             }
 
-            .main-grid {
-                gap: 0;
-            }
+
+            /* Identity */
 
             .identity {
                 margin-bottom: 18px;
             }
 
             .name {
-                margin-bottom: 4px;
+                margin-bottom: 5px;
 
                 font-size: clamp(23px, 7vw, 28px);
+
+                line-height: 1.1;
             }
 
             .profession,
@@ -329,68 +368,81 @@
                 line-height: 1.35;
             }
 
-            /* Photo with black frame */
+
+            /* Image */
 
             .hero-image {
-                width: 92%;
+                width: 90%;
 
-                margin: 0 auto 18px;
+                margin:
+                    0 auto 18px;
 
                 aspect-ratio: 4 / 3;
             }
 
+
             /* CTA */
 
             .actions {
-                gap: 10px;
+                width: 100%;
+
+                gap: 9px;
+
+                margin: 0;
             }
 
             .action {
                 min-height: 0;
 
-                height: clamp(86px, 12vh, 102px);
+                height: 88px;
 
-                padding: 13px 16px;
+                padding: 12px 15px;
             }
 
             .action-symbol {
-                font-size: 25px;
+                font-size: 24px;
             }
 
             .action-title {
                 font-size: 15px;
 
-                letter-spacing: 0.09em;
+                letter-spacing: 0.07em;
             }
 
             .action-description {
-                margin-top: 3px;
-
                 font-size: 12px;
+
+                margin-top: 3px;
             }
+
 
             /* Social */
 
             .social {
-                margin-top: 18px;
+                justify-content: center;
 
                 gap: 28px;
+
+                margin-top: 17px;
             }
 
             .social a {
                 font-size: 12px;
             }
 
-            /* No footer on mobile */
+
+            /* Footer */
 
             .footer {
                 display: none;
             }
+
         }
 
-        /* =========================
+
+        /* ==================================================
            SHORT MOBILE SCREENS
-        ========================= */
+        ================================================== */
 
         @media (max-width: 600px) and (max-height: 700px) {
 
@@ -400,7 +452,7 @@
             }
 
             .identity {
-                margin-bottom: 12px;
+                margin-bottom: 11px;
             }
 
             .name {
@@ -415,13 +467,9 @@
             }
 
             .hero-image {
-                width: 90%;
+                width: 88%;
 
-                margin-bottom: 12px;
-            }
-
-            .actions {
-                gap: 8px;
+                margin-bottom: 11px;
             }
 
             .action {
@@ -443,7 +491,7 @@
             }
 
             .social {
-                margin-top: 12px;
+                margin-top: 11px;
 
                 gap: 24px;
             }
@@ -453,15 +501,21 @@
     </style>
 </head>
 
+
 <body>
 
 <div class="page">
 
+
     <main class="content">
+
 
         <section class="main-grid">
 
-            <!-- FOTO -->
+
+            <!-- ==========================================
+                 FOTO
+            =========================================== -->
 
             <div class="hero-image">
 
@@ -473,9 +527,14 @@
             </div>
 
 
-            <!-- DATI + CTA -->
+            <!-- ==========================================
+                 COLONNA DESTRA
+            =========================================== -->
 
             <div class="details">
+
+
+                <!-- IDENTITÀ -->
 
                 <div class="identity">
 
@@ -494,7 +553,10 @@
                 </div>
 
 
+                <!-- CTA -->
+
                 <div class="actions">
+
 
                     <!-- SALVA CONTATTO -->
 
@@ -550,34 +612,40 @@
 
                     </a>
 
+
                 </div>
+
+
+                <!-- SOCIAL -->
+
+                <nav
+                    class="social"
+                    aria-label="Social media"
+                >
+
+                    <a
+                        href="https://www.instagram.com/danielezampinifotografo/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        INSTAGRAM
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/danielezampini/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LINKEDIN
+                    </a>
+
+                </nav>
+
 
             </div>
 
         </section>
 
-
-        <!-- SOCIAL -->
-
-        <nav class="social" aria-label="Social media">
-
-            <a
-                href="https://www.instagram.com/danielezampinifotografo/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                INSTAGRAM
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/danielezampini/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LINKEDIN
-            </a>
-
-        </nav>
 
     </main>
 
@@ -585,6 +653,7 @@
     <footer class="footer">
         © 2026 DANIELE ZAMPINI
     </footer>
+
 
 </div>
 
