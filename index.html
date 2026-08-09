@@ -42,6 +42,7 @@
             width: 100%;
             min-height: 100vh;
             min-height: 100svh;
+
             display: flex;
             flex-direction: column;
         }
@@ -49,33 +50,57 @@
         .content {
             width: min(960px, calc(100% - 48px));
             margin: 0 auto;
-            padding: 48px 0 60px;
+
+            padding: 48px 0 40px;
+
             flex: 1;
         }
 
         /* =========================
-           TOP SECTION
+           MAIN CARD
         ========================= */
 
-        .intro {
+        .main-grid {
             display: grid;
+
             grid-template-columns: 58% 1fr;
+
             gap: 32px;
-            align-items: start;
-            margin-bottom: 32px;
+
+            align-items: stretch;
         }
+
+        /* =========================
+           IMAGE
+        ========================= */
 
         .hero-image {
             width: 100%;
+
             aspect-ratio: 4 / 3;
+
             overflow: hidden;
         }
 
         .hero-image img {
             width: 100%;
             height: 100%;
+
             display: block;
+
             object-fit: cover;
+        }
+
+        /* =========================
+           IDENTITY + ACTIONS
+        ========================= */
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            min-width: 0;
         }
 
         .identity {
@@ -87,7 +112,9 @@
 
             font-size: 31px;
             line-height: 1.1;
+
             font-weight: 700;
+
             letter-spacing: 0.02em;
         }
 
@@ -97,6 +124,7 @@
 
             font-size: 17px;
             line-height: 1.5;
+
             font-weight: 300;
 
             color: #b5b5b5;
@@ -108,14 +136,16 @@
 
         .actions {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+
+            grid-template-columns: 1fr;
+
+            gap: 12px;
         }
 
         .action {
-            min-height: 150px;
+            min-height: 110px;
 
-            padding: 24px;
+            padding: 20px;
 
             display: flex;
             flex-direction: column;
@@ -124,6 +154,7 @@
             border: 1px solid #444444;
 
             color: #ffffff;
+
             text-decoration: none;
 
             transition:
@@ -137,26 +168,62 @@
         }
 
         .action-symbol {
-            font-size: 30px;
+            font-size: 28px;
             line-height: 1;
+
             font-weight: 300;
         }
 
         .action-title {
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.2;
+
             font-weight: 700;
-            letter-spacing: 0.12em;
+
+            letter-spacing: 0.10em;
         }
 
         .action-description {
-            margin-top: 6px;
+            margin-top: 5px;
 
             font-size: 13px;
             line-height: 1.4;
+
             font-weight: 300;
 
             color: #999999;
+        }
+
+        /* =========================
+           SOCIAL
+        ========================= */
+
+        .social {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 36px;
+
+            margin-top: 28px;
+        }
+
+        .social a {
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+        }
+
+        .social a:hover {
+            text-decoration: underline;
         }
 
         /* =========================
@@ -174,6 +241,7 @@
 
             font-size: 13px;
             line-height: 1.4;
+
             font-weight: 400;
 
             color: #666666;
@@ -187,19 +255,36 @@
 
             .content {
                 width: calc(100% - 32px);
+
                 padding-top: 32px;
-                padding-bottom: 32px;
+                padding-bottom: 28px;
             }
 
-            .intro {
+            .main-grid {
                 grid-template-columns: 1fr;
-                gap: 24px;
+
+                gap: 20px;
+            }
+
+            .details {
+                display: contents;
             }
 
             .identity {
-                order: -1;
+                order: 1;
             }
 
+            .hero-image {
+                order: 2;
+            }
+
+            .actions {
+                order: 3;
+            }
+
+            .social {
+                order: 4;
+            }
         }
 
         /* =========================
@@ -210,7 +295,7 @@
 
             .page {
                 min-height: 100svh;
-                max-height: 100svh;
+
                 overflow: hidden;
             }
 
@@ -223,17 +308,12 @@
                     16px;
             }
 
-            .intro {
-                display: flex;
-                flex-direction: column;
-
-                gap: 12px;
-
-                margin-bottom: 16px;
+            .main-grid {
+                gap: 0;
             }
 
             .identity {
-                order: -1;
+                margin-bottom: 18px;
             }
 
             .name {
@@ -245,24 +325,32 @@
             .profession,
             .location {
                 font-size: 15px;
+
                 line-height: 1.35;
             }
 
+            /* Photo with black frame */
+
             .hero-image {
-                width: 100%;
+                width: 92%;
+
+                margin: 0 auto 18px;
+
                 aspect-ratio: 4 / 3;
             }
 
+            /* CTA */
+
             .actions {
-                grid-template-columns: 1fr;
                 gap: 10px;
             }
 
             .action {
                 min-height: 0;
-                height: clamp(88px, 14vh, 112px);
 
-                padding: 14px 16px;
+                height: clamp(86px, 12vh, 102px);
+
+                padding: 13px 16px;
             }
 
             .action-symbol {
@@ -271,13 +359,29 @@
 
             .action-title {
                 font-size: 15px;
-                letter-spacing: 0.10em;
+
+                letter-spacing: 0.09em;
             }
 
             .action-description {
                 margin-top: 3px;
+
                 font-size: 12px;
             }
+
+            /* Social */
+
+            .social {
+                margin-top: 18px;
+
+                gap: 28px;
+            }
+
+            .social a {
+                font-size: 12px;
+            }
+
+            /* No footer on mobile */
 
             .footer {
                 display: none;
@@ -295,9 +399,8 @@
                 padding-bottom: 12px;
             }
 
-            .intro {
-                gap: 8px;
-                margin-bottom: 10px;
+            .identity {
+                margin-bottom: 12px;
             }
 
             .name {
@@ -307,11 +410,14 @@
             .profession,
             .location {
                 font-size: 14px;
+
                 line-height: 1.25;
             }
 
             .hero-image {
-                aspect-ratio: 4 / 3;
+                width: 90%;
+
+                margin-bottom: 12px;
             }
 
             .actions {
@@ -319,7 +425,8 @@
             }
 
             .action {
-                height: 78px;
+                height: 76px;
+
                 padding: 10px 14px;
             }
 
@@ -334,6 +441,13 @@
             .action-description {
                 font-size: 11px;
             }
+
+            .social {
+                margin-top: 12px;
+
+                gap: 24px;
+            }
+
         }
 
     </style>
@@ -345,87 +459,125 @@
 
     <main class="content">
 
-        <!-- FOTO + IDENTITÀ -->
+        <section class="main-grid">
 
-        <section class="intro">
+            <!-- FOTO -->
 
             <div class="hero-image">
+
                 <img
                     src="fotografia-still-life-papillon-viola-piuma-lusso-mani-del-sud-raffaele-stella-brienza-totale.jpg"
                     alt="Still life photography by Daniele Zampini"
                 >
+
             </div>
 
-            <div class="identity">
 
-                <h1 class="name">
-                    DANIELE ZAMPINI
-                </h1>
+            <!-- DATI + CTA -->
 
-                <p class="profession">
-                    Photographer / Retoucher / Digitech
-                </p>
+            <div class="details">
 
-                <p class="location">
-                    Italia
-                </p>
+                <div class="identity">
+
+                    <h1 class="name">
+                        DANIELE ZAMPINI
+                    </h1>
+
+                    <p class="profession">
+                        Photographer / Retoucher / Digitech
+                    </p>
+
+                    <p class="location">
+                        Italia
+                    </p>
+
+                </div>
+
+
+                <div class="actions">
+
+                    <!-- SALVA CONTATTO -->
+
+                    <a
+                        class="action"
+                        href="Daniele-Zampini.vcf"
+                        download
+                    >
+
+                        <span class="action-symbol">
+                            +
+                        </span>
+
+                        <div>
+
+                            <div class="action-title">
+                                SALVA IL CONTATTO
+                            </div>
+
+                            <div class="action-description">
+                                Aggiungi i miei dati in rubrica
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- VISITA SITO -->
+
+                    <a
+                        class="action"
+                        href="https://www.danielezampini.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <span class="action-symbol">
+                            ↗
+                        </span>
+
+                        <div>
+
+                            <div class="action-title">
+                                VISITA IL SITO
+                            </div>
+
+                            <div class="action-description">
+                                Portfolio e progetti
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- CTA -->
+        <!-- SOCIAL -->
 
-        <section class="actions">
-
-            <a
-                class="action"
-                href="Daniele-Zampini.vcf"
-                download
-            >
-
-                <span class="action-symbol">+</span>
-
-                <div>
-
-                    <div class="action-title">
-                        SALVA IL CONTATTO
-                    </div>
-
-                    <div class="action-description">
-                        Aggiungi i miei dati in rubrica
-                    </div>
-
-                </div>
-
-            </a>
-
+        <nav class="social" aria-label="Social media">
 
             <a
-                class="action"
-                href="https://www.danielezampini.com/"
+                href="https://www.instagram.com/danielezampinifotografo/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-
-                <span class="action-symbol">↗</span>
-
-                <div>
-
-                    <div class="action-title">
-                        VISITA IL SITO
-                    </div>
-
-                    <div class="action-description">
-                        Portfolio e progetti
-                    </div>
-
-                </div>
-
+                INSTAGRAM
             </a>
 
-        </section>
+            <a
+                href="https://www.linkedin.com/in/danielezampini/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LINKEDIN
+            </a>
+
+        </nav>
 
     </main>
 
