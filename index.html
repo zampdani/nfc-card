@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -10,19 +12,31 @@
 
     <title>Daniele Zampini</title>
 
-    <!-- Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ==================================================
+         GOOGLE FONT — LATO
+    ================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet"
     >
 
+
     <style>
 
         /* ==================================================
-           BASE
+           RESET
         ================================================== */
 
         * {
@@ -31,20 +45,28 @@
 
         html,
         body {
-            margin: 0;
-            padding: 0;
-
             width: 100%;
             min-height: 100%;
+
+            margin: 0;
+            padding: 0;
         }
 
+
+        /* ==================================================
+           BODY
+        ================================================== */
+
         body {
+
             background: #ffffff;
+
             color: #111111;
 
             font-family: "Lato", sans-serif;
 
             -webkit-font-smoothing: antialiased;
+
             text-rendering: optimizeLegibility;
         }
 
@@ -54,33 +76,49 @@
         ================================================== */
 
         .page {
+
             width: 100%;
+
             min-height: 100vh;
             min-height: 100svh;
 
             display: flex;
+
             flex-direction: column;
         }
 
+
+        /* ==================================================
+           CONTENT
+        ================================================== */
+
         .content {
-            width: min(960px, calc(100% - 48px));
+
+            width: min(
+                960px,
+                calc(100% - 48px)
+            );
 
             margin: 0 auto;
 
-            padding: 48px 0 40px;
+            padding:
+                48px 0
+                40px;
 
             flex: 1;
         }
 
 
         /* ==================================================
-           MAIN LAYOUT
+           DESKTOP — MAIN GRID
         ================================================== */
 
         .main-grid {
+
             display: grid;
 
-            grid-template-columns: 58% 1fr;
+            grid-template-columns:
+                58% 1fr;
 
             gap: 32px;
 
@@ -93,6 +131,7 @@
         ================================================== */
 
         .hero-image {
+
             width: 100%;
 
             aspect-ratio: 4 / 3;
@@ -103,6 +142,7 @@
         }
 
         .hero-image img {
+
             display: block;
 
             width: 100%;
@@ -117,12 +157,14 @@
         ================================================== */
 
         .details {
+
             min-width: 0;
 
-            display: flex;
-            flex-direction: column;
-
             height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
         }
 
 
@@ -131,13 +173,16 @@
         ================================================== */
 
         .identity {
+
             padding-top: 0;
         }
 
         .name {
+
             margin: 0 0 7px;
 
             font-size: 31px;
+
             line-height: 1.1;
 
             font-weight: 700;
@@ -145,9 +190,11 @@
 
         .profession,
         .location {
+
             margin: 0;
 
             font-size: 17px;
+
             line-height: 1.35;
 
             font-weight: 300;
@@ -157,10 +204,11 @@
 
 
         /* ==================================================
-           CTA
+           CTA CONTAINER
         ================================================== */
 
         .actions {
+
             display: grid;
 
             grid-template-columns: 1fr;
@@ -168,17 +216,26 @@
             gap: 32px;
 
             margin-top: 36px;
+
             margin-bottom: 32px;
         }
 
+
+        /* ==================================================
+           CTA
+        ================================================== */
+
         .action {
+
             min-height: 96px;
 
-            padding: 16px 18px;
+            padding:
+                16px 18px;
 
             display: grid;
 
-            grid-template-columns: 46px 1fr;
+            grid-template-columns:
+                46px 1fr;
 
             column-gap: 16px;
 
@@ -198,6 +255,7 @@
         }
 
         .action:hover {
+
             border-color: #111111;
 
             background: #f7f7f7;
@@ -205,10 +263,11 @@
 
 
         /* ==================================================
-           CTA ICONS
+           CTA ICON
         ================================================== */
 
         .action-icon {
+
             width: 42px;
             height: 42px;
 
@@ -221,6 +280,7 @@
         }
 
         .action-icon svg {
+
             display: block;
 
             width: 100%;
@@ -242,7 +302,9 @@
         ================================================== */
 
         .action-title {
+
             font-size: 15px;
+
             line-height: 1.2;
 
             font-weight: 700;
@@ -251,9 +313,11 @@
         }
 
         .action-description {
+
             margin-top: 4px;
 
             font-size: 13px;
+
             line-height: 1.35;
 
             font-weight: 300;
@@ -267,6 +331,7 @@
         ================================================== */
 
         .social {
+
             display: flex;
 
             justify-content: flex-end;
@@ -277,11 +342,13 @@
         }
 
         .social a {
+
             color: #111111;
 
             text-decoration: none;
 
             font-size: 13px;
+
             line-height: 1.4;
 
             font-weight: 700;
@@ -290,6 +357,7 @@
         }
 
         .social a:hover {
+
             text-decoration: underline;
         }
 
@@ -299,15 +367,19 @@
         ================================================== */
 
         .footer {
+
             width: 100%;
 
-            border-top: 1px solid #e5e5e5;
+            border-top:
+                1px solid #e5e5e5;
 
-            padding: 20px 24px;
+            padding:
+                20px 24px;
 
             text-align: center;
 
             font-size: 13px;
+
             line-height: 1.4;
 
             font-weight: 400;
@@ -317,109 +389,196 @@
 
 
         /* ==================================================
-           TABLET / MOBILE
-        ================================================== */
-
-        @media (max-width: 700px) {
-
-            .content {
-                width: calc(100% - 32px);
-
-                padding-top: 32px;
-                padding-bottom: 28px;
-            }
-
-            .main-grid {
-                grid-template-columns: 1fr;
-
-                gap: 0;
-            }
-
-            .details {
-                display: contents;
-
-                height: auto;
-            }
-
-            .identity {
-                order: 1;
-            }
-
-            .hero-image {
-                order: 2;
-            }
-
-            .actions {
-                order: 3;
-            }
-
-            .social {
-                order: 4;
-            }
-
-        }
-
-
-        /* ==================================================
            MOBILE
         ================================================== */
 
         @media (max-width: 600px) {
 
+
+            /* ----------------------------------------------
+               PAGE
+            ---------------------------------------------- */
+
             .page {
+
                 min-height: 100svh;
 
                 overflow: hidden;
             }
 
-            .content {
-                width: calc(100% - 32px);
 
-                padding:
-                    max(16px, env(safe-area-inset-top))
-                    0
-                    16px;
+            /* ----------------------------------------------
+               CONTENT
+            ---------------------------------------------- */
+
+            .content {
+
+                width:
+                    calc(100% - 32px);
+
+                min-height: 100svh;
+
+                padding-top:
+                    max(
+                        16px,
+                        env(safe-area-inset-top)
+                    );
+
+                padding-bottom:
+                    max(
+                        16px,
+                        env(safe-area-inset-bottom)
+                    );
             }
 
 
-            /* Identity */
+            /* ----------------------------------------------
+               MAIN GRID
+
+               1. Identità
+               2. Spazio + foto
+               3. CTA
+               4. Social
+            ---------------------------------------------- */
+
+            .main-grid {
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    auto
+                    1fr
+                    auto
+                    auto;
+
+                gap: 0;
+
+                min-height:
+                    calc(
+                        100svh
+                        -
+                        max(
+                            16px,
+                            env(safe-area-inset-top)
+                        )
+                        -
+                        max(
+                            16px,
+                            env(safe-area-inset-bottom)
+                        )
+                    );
+            }
+
+
+            /* ----------------------------------------------
+               DETAILS
+
+               Su mobile i suoi figli diventano
+               direttamente elementi della grid.
+            ---------------------------------------------- */
+
+            .details {
+
+                display: contents;
+
+                height: auto;
+            }
+
+
+            /* ----------------------------------------------
+               IDENTITY
+            ---------------------------------------------- */
 
             .identity {
-                margin-bottom: 18px;
+
+                grid-row: 1;
+
+                margin: 0;
+
+                padding: 0;
             }
 
             .name {
-                margin-bottom: 5px;
 
-                font-size: clamp(23px, 7vw, 28px);
+                margin:
+                    0 0 5px;
+
+                font-size:
+                    clamp(
+                        23px,
+                        7vw,
+                        28px
+                    );
 
                 line-height: 1.1;
+
+                font-weight: 700;
             }
 
             .profession,
             .location {
+
+                margin: 0;
+
                 font-size: 15px;
 
                 line-height: 1.35;
+
+                font-weight: 300;
+
+                color: #666666;
             }
 
 
-            /* Image */
+            /* ----------------------------------------------
+               IMAGE
+            ---------------------------------------------- */
 
             .hero-image {
-                width: 90%;
 
-                margin:
-                    0 auto 18px;
+                grid-row: 2;
+
+                align-self: center;
+
+                justify-self: center;
+
+                width: 88%;
 
                 aspect-ratio: 4 / 3;
+
+                margin: 0;
+
+                overflow: hidden;
+
+                background: #f5f5f5;
+            }
+
+            .hero-image img {
+
+                display: block;
+
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
             }
 
 
-            /* CTA */
+            /* ----------------------------------------------
+               CTA
+            ---------------------------------------------- */
 
             .actions {
+
+                grid-row: 3;
+
                 width: 100%;
+
+                display: grid;
+
+                grid-template-columns: 1fr;
 
                 gap: 9px;
 
@@ -427,38 +586,69 @@
             }
 
             .action {
-                min-height: 0;
+
+                width: 100%;
 
                 height: 88px;
 
-                padding: 12px 15px;
+                min-height: 0;
 
-                grid-template-columns: 42px 1fr;
+                padding:
+                    12px 15px;
+
+                display: grid;
+
+                grid-template-columns:
+                    42px 1fr;
 
                 column-gap: 14px;
+
+                align-items: center;
             }
 
+
+            /* ----------------------------------------------
+               ICON
+            ---------------------------------------------- */
+
             .action-icon {
+
                 width: 38px;
                 height: 38px;
             }
 
+
+            /* ----------------------------------------------
+               CTA TEXT
+            ---------------------------------------------- */
+
             .action-title {
+
                 font-size: 15px;
+
+                line-height: 1.2;
 
                 letter-spacing: 0.07em;
             }
 
             .action-description {
-                font-size: 12px;
 
                 margin-top: 3px;
+
+                font-size: 12px;
+
+                line-height: 1.35;
             }
 
 
-            /* Social */
+            /* ----------------------------------------------
+               SOCIAL
+            ---------------------------------------------- */
 
             .social {
+
+                grid-row: 4;
+
                 justify-content: center;
 
                 gap: 28px;
@@ -467,13 +657,19 @@
             }
 
             .social a {
+
                 font-size: 12px;
+
+                line-height: 1.4;
             }
 
 
-            /* Footer */
+            /* ----------------------------------------------
+               FOOTER
+            ---------------------------------------------- */
 
             .footer {
+
                 display: none;
             }
 
@@ -481,61 +677,119 @@
 
 
         /* ==================================================
-           SHORT MOBILE SCREENS
+           MOBILE — SCHERMI BASSI
         ================================================== */
 
-        @media (max-width: 600px) and (max-height: 700px) {
+        @media (
+            max-width: 600px
+        ) and (
+            max-height: 700px
+        ) {
+
+
+            /* ----------------------------------------------
+               CONTENT
+            ---------------------------------------------- */
 
             .content {
+
                 padding-top: 12px;
+
                 padding-bottom: 12px;
             }
 
-            .identity {
-                margin-bottom: 11px;
+
+            /* ----------------------------------------------
+               GRID
+            ---------------------------------------------- */
+
+            .main-grid {
+
+                min-height:
+                    calc(
+                        100svh - 24px
+                    );
             }
 
+
+            /* ----------------------------------------------
+               IDENTITY
+            ---------------------------------------------- */
+
             .name {
+
                 font-size: 22px;
             }
 
             .profession,
             .location {
+
                 font-size: 14px;
 
                 line-height: 1.25;
             }
 
-            .hero-image {
-                width: 88%;
 
-                margin-bottom: 11px;
+            /* ----------------------------------------------
+               IMAGE
+            ---------------------------------------------- */
+
+            .hero-image {
+
+                width: 88%;
             }
 
+
+            /* ----------------------------------------------
+               CTA
+            ---------------------------------------------- */
+
             .action {
+
                 height: 76px;
 
-                padding: 10px 14px;
+                padding:
+                    10px 14px;
 
-                grid-template-columns: 38px 1fr;
+                grid-template-columns:
+                    38px 1fr;
 
                 column-gap: 13px;
             }
 
+
+            /* ----------------------------------------------
+               ICON
+            ---------------------------------------------- */
+
             .action-icon {
+
                 width: 34px;
                 height: 34px;
             }
 
+
+            /* ----------------------------------------------
+               CTA TEXT
+            ---------------------------------------------- */
+
             .action-title {
+
                 font-size: 14px;
             }
 
             .action-description {
+
                 font-size: 11px;
             }
 
+
+            /* ----------------------------------------------
+               SOCIAL
+            ---------------------------------------------- */
+
             .social {
+
                 margin-top: 11px;
 
                 gap: 24px;
@@ -544,13 +798,19 @@
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
 <div class="page">
 
+
+    <!-- ==================================================
+         MAIN CONTENT
+    =================================================== -->
 
     <main class="content">
 
@@ -579,7 +839,9 @@
             <div class="details">
 
 
-                <!-- IDENTITÀ -->
+                <!-- ======================================
+                     IDENTITÀ
+                ======================================= -->
 
                 <div class="identity">
 
@@ -598,12 +860,16 @@
                 </div>
 
 
-                <!-- CTA -->
+                <!-- ======================================
+                     CTA
+                ======================================= -->
 
                 <div class="actions">
 
 
-                    <!-- SALVA CONTATTO -->
+                    <!-- ==================================
+                         SALVA CONTATTO
+                    =================================== -->
 
                     <a
                         class="action"
@@ -611,9 +877,14 @@
                         download
                     >
 
-                        <span class="action-icon" aria-hidden="true">
+                        <span
+                            class="action-icon"
+                            aria-hidden="true"
+                        >
 
-                            <svg viewBox="0 0 48 48">
+                            <svg
+                                viewBox="0 0 48 48"
+                            >
 
                                 <line
                                     x1="24"
@@ -633,6 +904,7 @@
 
                         </span>
 
+
                         <div>
 
                             <div class="action-title">
@@ -648,7 +920,9 @@
                     </a>
 
 
-                    <!-- VISITA SITO -->
+                    <!-- ==================================
+                         VISITA IL SITO
+                    =================================== -->
 
                     <a
                         class="action"
@@ -657,9 +931,14 @@
                         rel="noopener noreferrer"
                     >
 
-                        <span class="action-icon" aria-hidden="true">
+                        <span
+                            class="action-icon"
+                            aria-hidden="true"
+                        >
 
-                            <svg viewBox="0 0 48 48">
+                            <svg
+                                viewBox="0 0 48 48"
+                            >
 
                                 <line
                                     x1="10"
@@ -675,6 +954,7 @@
                             </svg>
 
                         </span>
+
 
                         <div>
 
@@ -694,7 +974,9 @@
                 </div>
 
 
-                <!-- SOCIAL -->
+                <!-- ======================================
+                     SOCIAL
+                ======================================= -->
 
                 <nav
                     class="social"
@@ -722,18 +1004,27 @@
 
             </div>
 
+
         </section>
 
 
     </main>
 
 
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
     <footer class="footer">
+
         © 2026 DANIELE ZAMPINI
+
     </footer>
 
 
 </div>
 
+
 </body>
+
 </html>
