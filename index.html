@@ -369,11 +369,13 @@
             .page {
                 min-height: 100svh;
                 height: 100svh;
+
                 overflow: hidden;
             }
 
             .content {
                 width: calc(100% - 32px);
+
                 min-height: 100svh;
 
                 padding:
@@ -390,17 +392,17 @@
                         - max(16px, env(safe-area-inset-bottom))
                     );
 
-                flex: 1;
-
                 display: flex;
                 flex-direction: column;
             }
 
 
-            /* Identity */
+            /* ==============================================
+               IDENTITY
+            ============================================== */
 
             .identity {
-                margin-bottom: 18px;
+                margin-bottom: 0;
             }
 
             .name {
@@ -419,19 +421,27 @@
             }
 
 
-            /* Image */
+            /* ==============================================
+               IMAGE
+
+               90% width = 5% margin on each side.
+               Using 5% vertically gives the same spacing,
+               because percentage margins are calculated
+               from the width of the containing block.
+            ============================================== */
 
             .hero-image {
                 width: 90%;
 
-                margin:
-                    0 auto 18px;
+                margin: 5% auto;
 
                 aspect-ratio: 4 / 3;
             }
 
 
-            /* CTA */
+            /* ==============================================
+               CTA
+            ============================================== */
 
             .actions {
                 width: 100%;
@@ -471,7 +481,9 @@
             }
 
 
-            /* Social */
+            /* ==============================================
+               SOCIAL
+            ============================================== */
 
             .social {
                 justify-content: center;
@@ -479,6 +491,7 @@
                 gap: 28px;
 
                 margin-top: auto;
+
                 padding-top: 17px;
             }
 
@@ -487,7 +500,9 @@
             }
 
 
-            /* Footer */
+            /* ==============================================
+               FOOTER
+            ============================================== */
 
             .footer {
                 display: none;
@@ -507,10 +522,6 @@
                 padding-bottom: 12px;
             }
 
-            .identity {
-                margin-bottom: 11px;
-            }
-
             .name {
                 font-size: 22px;
             }
@@ -525,7 +536,7 @@
             .hero-image {
                 width: 88%;
 
-                margin-bottom: 11px;
+                margin: 5% auto;
             }
 
             .action {
